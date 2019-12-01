@@ -1,4 +1,4 @@
-const API_KEY = process.env.api_key;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const listGallery = (url) => {
 	return fetch(url, {

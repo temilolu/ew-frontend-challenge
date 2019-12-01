@@ -20,7 +20,7 @@ export default class App extends Component {
 
 	fetchGallery = () => {
 		const { section, sort, showWindow, showViral } = this.state;
-		const url = `/${section}/${sort}/${showWindow}?showViral=${showViral}`;
+		const url = `https://api.imgur.com/3/gallery/${section}/${sort}/${showWindow}?showViral=${showViral}`;
 
 		return listGallery(url).then((result) => {
 			if (result.error) console.log(result.error);
@@ -40,7 +40,6 @@ export default class App extends Component {
 
 	clickSubmit = (e) => {
 		e.preventDefault();
-		console.log('handle');
 
 		this.fetchGallery();
 	};
